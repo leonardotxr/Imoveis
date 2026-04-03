@@ -27,3 +27,20 @@ sd(imoveis$metragem)
 
 mean(imoveis$imposto_anual)
 sd(imoveis$imposto_anual)
+
+################################################
+
+# Gráficos:
+
+# Histograma do preço do imóvel
+ggplot(imoveis, aes(x = preco)) +
+  geom_histogram(fill = "lightblue", color = "black", bins = 30) +
+  labs(title = "Histograma do Preço", x = "Preço", y = "Frequência") +
+  theme_minimal()
+
+# Gráfico de dispersão imposto x metragem
+ggplot(imoveis, aes(x = metragem, y = imposto_anual)) +
+  geom_point(color = "blue") +
+  geom_smooth(method = "lm", color = "red", se = FALSE) +
+  labs(title = "Imposto vs Metragem", x = "Metragem", y = "Imposto") +
+  theme_minimal()
