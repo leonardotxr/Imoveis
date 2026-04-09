@@ -26,3 +26,19 @@ ggplot(imoveis, aes(x = metragem)) +
     y = "Frequência"
   ) +
   theme_minimal()
+
+# 3) Medidas descritivas
+
+# Média
+media_imposto <- mean(imoveis$imposto_anual, na.rm = TRUE)
+
+# Mediana
+mediana_imposto <- median(imoveis$imposto_anual, na.rm = TRUE)
+
+# Desvio padrão
+dp_imposto <- sd(imoveis$imposto_anual, na.rm = TRUE)
+
+# Exibir resultados
+media_imposto
+mediana_imposto
+dp_imposto
