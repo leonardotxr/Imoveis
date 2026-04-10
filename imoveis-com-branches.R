@@ -8,9 +8,6 @@ imoveis <- read.csv2("imoveis.csv", stringsAsFactors = FALSE)
 
 # Visualização inicial
 str(imoveis)
-<<<<<<< HEAD
-head(imoveis)
-=======
 head(imoveis)
 
 # 2) Gráfico
@@ -29,9 +26,6 @@ ggplot(imoveis, aes(x = metragem)) +
     y = "Frequência"
   ) +
   theme_minimal()
-<<<<<<< HEAD
->>>>>>> graficos
-=======
 
 # 3) Medidas descritivas
 
@@ -48,4 +42,3 @@ dp_imposto <- sd(imoveis$imposto_anual, na.rm = TRUE)
 media_imposto
 mediana_imposto
 dp_imposto
->>>>>>> medidas
